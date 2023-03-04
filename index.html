@@ -375,13 +375,51 @@
               </li>
             </ul>
           </div>
+        
+        <div class="container footbar-newsletter">
+          <form>
+            <label>
+              <h4 class="newsletter-text">ZAPISZ SIĘ DO NEWSLETTERA</h4>
+              <input type="email" name="email" placeholder="E-mail" />
+            </label>
+            <button type="submit">Zapisz się
+              <div class="newsletter-button">
+                <svg class="send-icon" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
+            </button>
+          </form>
         </div>
+      </div>
       </section>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>X</button>
-      </div>
+        <h2 class="modal-header">Zostaw swoje dane w formularzu poniżej</h2>
+      <div class="modal-details">
+        
+          <label class="input-container">
+            <span class="label-text">Imię</span>
+            <input class="input-element" type="text" id="name-input" name="name-input">
+            <svg class="modal-icon" width="12" height="12"><use href="./images/icons.svg#icon-person-modal"></use>
+            </svg>
+          </label>
+          <label class="input-container">
+            <span class="label-text">Telefon</span>
+            <input class="input-element" type="text" id="name-input" name="name-input">
+            <svg class="modal-icon" width="12" height="12"><use href="./images/icons.svg#icon-phone-modal"></use>
+            </svg>
+          </label>
+          <label class="input-container">
+            <span class="label-text">Email</span>
+            <input class="input-element" type="text" id="name-input" name="name-input">
+            <svg class="modal-icon" width="12" height="12"><use href="./images/icons.svg#icon-email-modal"></use>
+            </svg>
+          </label>
+          <label class="input-container">
+          <span class="label-text">Komentarz</span>
+            <textarea name="feedback" placeholder="Wprowadź tekst"></textarea>
+          </label>
+        </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
