@@ -536,9 +536,10 @@ button:focus {
 .footbar-social {
   display: flex;
   flex-wrap: wrap;
+  margin-right: 0;
   margin-left: 0;
   padding-left: 0;
-  margin-right: 78px;
+  padding-right: 70px;
 }
 
 .social-text {
@@ -559,7 +560,6 @@ button:focus {
   display: flex;
   align-items: end;
   width: 200px;
-  height: 88, 4px;
 }
 .newsletter-text {
   margin-bottom: 20px;
@@ -703,7 +703,6 @@ textarea {
 
 .input-container {
   position: relative;
-  display: inline-block;
   margin-bottom: 10px;
 }
 .label-text {
@@ -717,9 +716,12 @@ textarea {
   padding-left: 40px;
 }
 .modal-icon {
+  display: block;
   position: absolute;
   top: 50%;
   left: 15px;
+  width: 13px;
+  height: 13px;
   fill: var(--main-color);
 }
 .close-button {
