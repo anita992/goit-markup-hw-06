@@ -124,7 +124,6 @@ body {
 
 .card-set {
   display: flex;
-  height: 294px;
   gap: 30px;
 }
 
@@ -543,17 +542,27 @@ button:focus {
 }
 
 .social-text {
-  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
   color: var(--third-color);
 }
 
 .footbar-newsletter {
   position: relative;
   display: flex;
-
   margin-left: 0;
   padding-left: 0;
+  padding-right: 0;
   bottom: 0;
+}
+.newsletter-label {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
 }
 .button-position {
   position: relative;
@@ -562,6 +571,11 @@ button:focus {
   width: 200px;
 }
 .newsletter-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 1);
 }
@@ -580,13 +594,15 @@ button:focus {
 .joinus {
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.88;
   margin-right: 24px;
   color: var(--third-color);
 }
 .input-mail {
   width: 358px;
   height: 50px;
+
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -611,6 +627,7 @@ button:focus {
 
 .icon-social-footer {
   display: flex;
+  margin-top: 20px;
   gap: 10px;
 }
 
@@ -688,12 +705,19 @@ button:focus {
   transform: translate(-50%, -50%);
 }
 .modal-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
   margin: 40px 40px 12px 40px;
 }
 .modal-details {
   display: flex;
   flex-direction: column;
-  padding: 12px 40px 164px 40px;
+  padding: 12px 40px 40px 40px;
 }
 textarea {
   resize: none;
@@ -708,21 +732,124 @@ textarea {
 .label-text {
   position: relative;
   display: flex;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
   color: var(--secondary-color);
+}
+.feedback-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.5);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.feedback-text:focus {
+  border-color: var(--accent-color);
+}
+.feedback-text:hover {
+  border-color: var(--accent-color);
+}
+.rules {
+  font-size: 14px;
+  line-height: 1.71;
+}
+.rules-title {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 .input-element {
   width: 100%;
   height: 40px;
   padding-left: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-icon {
   display: block;
   position: absolute;
   top: 50%;
   left: 15px;
-  width: 13px;
-  height: 13px;
   fill: var(--main-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-element:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.input-element:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+.input-element:hover {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.input-element:hover + .modal-icon {
+  fill: var(--accent-color);
+}
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox-icon {
+  margin-right: 9px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  content-visibility: hidden;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-input:checked + .checkbox-icon {
+  content-visibility: visible;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+.send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.send-button {
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.send-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  padding: 10px 76px;
+  color: var(--third-color);
 }
 .close-button {
   position: absolute;

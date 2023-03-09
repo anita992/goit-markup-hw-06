@@ -174,7 +174,6 @@
           <h2 class="team">Nasz zespół</h2>
           <ul class="card-set our-team">
             <li>
-              
               <div class="card">
                 <img
                   class="card-image no-gap"
@@ -357,7 +356,7 @@
           </div>
           <div class="container footbar-social">
             <ul>
-              <li><h4 class="social-text">DOŁĄCZ DO NAS</h4></li>
+              <li><span class="social-text">DOŁĄCZ DO NAS</span></li>
               <li>
                 <div class="icon-social-footer">
                   <svg class="footer-icon" width="44" height="44">
@@ -376,58 +375,100 @@
               </li>
             </ul>
           </div>
-        
-       <div>
-          <form class=" cointainer footbar-newsletter">
-            <label>
-              <h4 class="newsletter-text">ZAPISZ SIĘ DO NEWSLETTERA</h4>
-              <input class="input-mail" type="email" name="email" placeholder="E-mail" />
-             
+          <form class="cointainer footbar-newsletter">
+            <label class="newsletter-label">
+              <span class="newsletter-text">ZAPISZ SIĘ DO NEWSLETTERA</span>
+              <input
+                class="input-mail"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
             </label>
             <div class="button-position">
-            <button type="submit" class="newsletter-button"><span class="joinus">Zapisz się</span>
-              
-              <svg class="send-icon" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
-          </button>
-        </div>
+              <button type="submit" class="newsletter-button">
+                <span class="joinus">Zapisz się</span>
+                <svg class="send-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
-      </div>
       </section>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>X</button>
         <h2 class="modal-header">Zostaw swoje dane w formularzu poniżej</h2>
-      <div class="modal-details">
-        
+        <div class="modal-details">
           <label class="input-container">
             <span class="label-text">Imię</span>
-            <input class="input-element" type="text" id="name-input" name="name-input">
-            <svg class="modal-icon" width="12" height="12"  ><use  href="./images/icons.svg#icon-person-black2"></use>
+            <input
+              class="input-element"
+              type="text"
+              id="name-input"
+              name="name-input"
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-person-black2"></use>
             </svg>
           </label>
           <label class="input-container">
             <span class="label-text">Telefon</span>
-            <input class="input-element" type="text" id="name-input" name="name-input">
-            <svg class="modal-icon" witdh="31" height="18" ><use href="./images/icons.svg#icon-phone-black2" ></use>
+            <input
+              class="input-element"
+              type="text"
+              id="phone"
+              name="name-input"
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-phone-black2"></use>
             </svg>
           </label>
           <label class="input-container">
             <span class="label-text">Email</span>
-            <input class="input-element" type="text" id="name-input" name="name-input">
-            <svg class="modal-icon" width="15" height="13"><use href="./images/icons.svg#icon-email-black2"></use>
+            <input
+              class="input-element"
+              type="text"
+              id="email"
+              name="name-input"
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-email-black2"></use>
             </svg>
           </label>
           <label class="input-container">
-          <span class="label-text">Komentarz</span>
-            <textarea name="feedback" placeholder="Wprowadź tekst"></textarea>
+            <span class="label-text">Komentarz</span>
+            <textarea
+              class="feedback-text"
+              name="feedback"
+              placeholder="Wprowadź tekst"
+            ></textarea>
           </label>
-          <label>
-          <input type="checkbox" name="rules" value="Oświadczam iż akceptuje Regulamin i Politykę prywatności" checked/>
-          Oświadczam iż akceptuje Regulamin i Politykę prywatności</label>
-        </div>
 
+          <form>
+            <label class="checkbox-container" for="checkbox">
+              <input class="checkbox-input" type="checkbox" id="checkbox" />
+
+              <svg class="checkbox-icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-icon-check-1"></use>
+              </svg>
+
+              <span class="rules">
+                Oświadczam iż akceptuję
+                <span class="rules-title"> Regulamin</span> i
+                <span class="rules-title">Politykę prywatności</span>
+              </span>
+            </label>
+          </form>
+          <div class="send">
+            <button type="submit" class="send-button">
+              <span class="send-text">Wyślij</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
