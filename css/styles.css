@@ -364,11 +364,11 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 49px 45px 49px 24px;
   align-items: center;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+  padding: 49px 45px 49px 24px;
   background: rgba(33, 150, 243, 0.9);
   color: var(--third-color);
   transition-duration: 250ms;
@@ -547,7 +547,6 @@ button:focus {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--third-color);
 }
 
@@ -587,9 +586,10 @@ button:focus {
   width: 200px;
   height: 50px;
   margin-left: 12px;
-  background: #2196f3;
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 .joinus {
   font-weight: 700;
@@ -601,11 +601,20 @@ button:focus {
 .input-mail {
   width: 358px;
   height: 50px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
   padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: var(--footbar-background-color);
+  color: var(--third-color);
+}
+.input-mail:hover,
+.input-mail:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 .logo-word {
@@ -659,10 +668,10 @@ button:focus {
 }
 
 .mail a {
-  margin: 9px 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin: 9px 0;
   color: var(--footbar-contact-color);
   text-decoration: underline;
 }
@@ -697,7 +706,6 @@ button:focus {
   top: 50%;
   left: 50%;
   width: 528px;
-  min-height: 581px;
   background-color: var(--third-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -705,14 +713,14 @@ button:focus {
   transform: translate(-50%, -50%);
 }
 .modal-header {
+  text-align: center;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;
-  margin: 40px 40px 12px 40px;
+  margin: 40px 40px 0px 40px;
 }
 .modal-details {
   display: flex;
@@ -723,6 +731,13 @@ textarea {
   resize: none;
   width: 100%;
   height: 120px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  appearance: textfield;
 }
 
 .input-container {
@@ -761,15 +776,17 @@ textarea {
   font-size: 14px;
   line-height: 1.71;
 }
-.rules-title {
+.rules-link {
+  font-size: 14px;
+  line-height: 1.71;
   color: var(--accent-color);
   text-decoration: underline;
 }
 .input-element {
+  box-sizing: border-box;
   width: 100%;
   height: 40px;
   padding-left: 40px;
-  box-sizing: border-box;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition-property: border-color;
@@ -778,8 +795,8 @@ textarea {
 }
 
 .modal-icon {
-  display: block;
   position: absolute;
+  display: block;
   top: 50%;
   left: 15px;
   fill: var(--main-color);
@@ -801,12 +818,13 @@ textarea {
   fill: var(--accent-color);
 }
 .checkbox-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: relative;
   cursor: pointer;
+  margin-top: 10px;
 }
 .checkbox-input {
   opacity: 0;
@@ -815,9 +833,9 @@ textarea {
   width: 0;
 }
 .checkbox-icon {
-  margin-right: 9px;
   width: 16px;
   height: 15px;
+  margin-right: 9px;
   border: 2px solid var(--main-color);
   border-radius: 2px;
   content-visibility: hidden;
@@ -829,15 +847,11 @@ textarea {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
-.send {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-}
+
 .send-button {
   width: 200px;
   height: 50px;
+  margin: 20px auto 0px auto;
   background: var(--accent-color);
   border-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
